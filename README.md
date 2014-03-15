@@ -38,10 +38,10 @@ OK so you need the [Android Development Tools Bundle for your chosen OS.](http:/
 
 
 ### Change Strings.xml and Copy Your Media
-Change the values in Strings.xml to match your file names.  
-Note you should only use a-z0-9 or lowercase alphanumeric file names without spaces or special chars.
-For Video please DO NOT list the file extension in the Strings.xml file. 
-Strings.xml is located in ```res/values```
+Change the values in Strings.xml to match your file names. Strings.xml is located in ```res/values```
+_Note you should only use a-z0-9 or lowercase alphanumeric file names without spaces or special chars_
+_For Video please DO NOT list the file extension in the Strings.xml file_
+
 ![][5]
 
 You should also update Strings.xml to reflect your new activity you wish to Auto Boot. 
@@ -57,12 +57,6 @@ Add your media to either ```assets/gifs``` for .Gif, ```assets/www``` for HTML, 
 ### Change Your AndroidManifest.xml
 Edit the Manifest file to refelect the media you added.
 ![][8]
-
-### For VIDEO.java
-![][9]
-
-### For GIF.java
-![][3]
 
 
 ### Hit Play
