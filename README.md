@@ -26,6 +26,8 @@ OK so you need the [Android Development Tools Bundle for your chosen OS.](http:/
 
 
 
+_Please note this carries a Creative Commons Attribution-NonCommercial 3.0 license.  For a Commercial license please contact me_
+
 ###Import The FULLSCREEN Project 
 
 ![][1]
