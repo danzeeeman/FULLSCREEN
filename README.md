@@ -39,7 +39,9 @@ OK so you need the [Android Development Tools Bundle for your chosen OS.](http:/
 
 ### Change Strings.xml and Copy Your Media
 Change the values in Strings.xml to match your file names. Strings.xml is located in ```res/values```
+
 _Note you should only use a-z0-9 or lowercase alphanumeric file names without spaces or special chars_
+
 _For Video please DO NOT list the file extension in the Strings.xml file_
 
 ![][5]
