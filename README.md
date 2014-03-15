@@ -38,10 +38,10 @@ OK so you need the [Android Development Tools Bundle for your chosen OS.](http:/
 
 
 ### Change Strings.xml and Copy Your Media
-Change the values in Strings.xml to match your file names.  
-Note you should only use a-z0-9 or lowercase alphanumeric file names without spaces or special chars.
-For Video please DO NOT list the file extension in the Strings.xml file. 
-Strings.xml is located in ```res/values```
+Change the values in Strings.xml to match your file names. Strings.xml is located in ```res/values```
+_Note you should only use a-z0-9 or lowercase alphanumeric file names without spaces or special chars_
+_For Video please DO NOT list the file extension in the Strings.xml file_
+
 ![][5]
 
 You should also update Strings.xml to reflect your new activity you wish to Auto Boot. 
@@ -58,12 +58,6 @@ Add your media to either ```assets/gifs``` for .Gif, ```assets/www``` for HTML, 
 Edit the Manifest file to refelect the media you added.
 ![][8]
 
-### For VIDEO.java
-![][9]
-
-### For GIF.java
-![][3]
-
 
 ### Hit Play
 ![][9]
@@ -77,5 +71,5 @@ Edit the Manifest file to refelect the media you added.
   [5]: https://raw.github.com/danthemellowman/FULLSCREEN/master/notes/StepTwoChangeStrings.png
   [6]: https://raw.github.com/danthemellowman/FULLSCREEN/master/notes/ImportGifWWW.png
   [7]: https://raw.github.com/danthemellowman/FULLSCREEN/master/notes/ImportVideo.png
-  [8]: https://raw.github.com/danthemellowman/FULLSCREEN/master/notes/Step-Two-ChangeSourceCode.png
-  [9]: https://raw.github.com/danthemellowman/FULLSCREEN/master/notes/Step-Five-HIT-PLAY.png
+  [8]: https://raw.github.com/danthemellowman/FULLSCREEN/master/notes/Step-Four-ChangeManifest.png
+  [9]: https://raw.github.com/danthemellowman/FULLSCREEN/master/notes/%20Step-Five-HIT-PLAY.png
