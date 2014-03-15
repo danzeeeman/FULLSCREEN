@@ -77,5 +77,5 @@ Edit the Manifest file to refelect the media you added.
   [5]: https://raw.github.com/danthemellowman/FULLSCREEN/master/notes/StepTwoChangeStrings.png
   [6]: https://raw.github.com/danthemellowman/FULLSCREEN/master/notes/ImportGifWWW.png
   [7]: https://raw.github.com/danthemellowman/FULLSCREEN/master/notes/ImportVideo.png
-  [8]: https://raw.github.com/danthemellowman/FULLSCREEN/master/notes/Step-Two-ChangeSourceCode.png
-  [9]: https://raw.github.com/danthemellowman/FULLSCREEN/master/notes/Step-Five-HIT-PLAY.png
+  [8]: https://raw.github.com/danthemellowman/FULLSCREEN/master/notes/Step-Four-ChangeManifest.png
+  [9]: https://raw.github.com/danthemellowman/FULLSCREEN/master/notes/%20Step-Five-HIT-PLAY.png
