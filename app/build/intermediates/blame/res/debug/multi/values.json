@@ -1,0 +1,162 @@
+[
+    {
+        "outputFile": "/Users/dantheman/src/android/FULLSCREEN-AS/app/build/intermediates/res/merged/debug/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 49,
+                    "endOffset": 100
+                },
+                "from": {
+                    "file": "/Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/res/values/colors.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 282,
+                    "endColumn": 42,
+                    "endOffset": 320
+                },
+                "from": {
+                    "file": "/Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 325,
+                    "endColumn": 68,
+                    "endOffset": 389
+                },
+                "from": {
+                    "file": "/Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 394,
+                    "endColumn": 63,
+                    "endOffset": 453
+                },
+                "from": {
+                    "file": "/Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 458,
+                    "endColumn": 50,
+                    "endOffset": 504
+                },
+                "from": {
+                    "file": "/Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 509,
+                    "endColumn": 102,
+                    "endOffset": 607
+                },
+                "from": {
+                    "file": "/Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 1,
+                        "startOffset": 95,
+                        "endColumn": 99,
+                        "endOffset": 193
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 612,
+                    "endColumn": 91,
+                    "endOffset": 699
+                },
+                "from": {
+                    "file": "/Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/res/values/strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 704,
+                    "endLine": 16,
+                    "endColumn": 12,
+                    "endOffset": 990
+                },
+                "from": {
+                    "file": "/Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/res/values/styles.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 995,
+                    "endLine": 19,
+                    "endColumn": 12,
+                    "endOffset": 1150
+                },
+                "from": {
+                    "file": "/Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/res/values/styles.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1155,
+                    "endLine": 26,
+                    "endColumn": 12,
+                    "endOffset": 1478
+                },
+                "from": {
+                    "file": "/Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/res/values/styles.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 1483,
+                    "endColumn": 35,
+                    "endOffset": 1514
+                },
+                "from": {
+                    "file": "/Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/res/values/styles.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 1519,
+                    "endLine": 33,
+                    "endColumn": 12,
+                    "endOffset": 1850
+                },
+                "from": {
+                    "file": "/Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/res/values/styles.xml"
+                }
+            }
+        ]
+    }
+]

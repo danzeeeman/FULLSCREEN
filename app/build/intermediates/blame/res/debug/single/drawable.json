@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/dantheman/src/android/FULLSCREEN-AS/app/build/intermediates/res/merged/debug/drawable/horizontal.png",
+        "source": "/Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/res/drawable/horizontal.png"
+    },
+    {
+        "merged": "/Users/dantheman/src/android/FULLSCREEN-AS/app/build/intermediates/res/merged/debug/drawable/ic_launcher.png",
+        "source": "/Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/res/drawable/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/dantheman/src/android/FULLSCREEN-AS/app/build/intermediates/res/merged/debug/drawable/vertical.png",
+        "source": "/Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/res/drawable/vertical.png"
+    }
+]

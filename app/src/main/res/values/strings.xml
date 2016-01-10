@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HANDS</string>
+	<string name="html_file">http://webrtc.github.io/samples/src/content/getusermedia/canvas/</string>
+	<string name="gif_file">gifs/hats.gif</string>
+	<string name="video_file">android.resource://com.xpo.fullscreen/raw/YOUR_VIDEO</string>
+	<string name="autoboot_package">com.xpo.fullscreen</string>
+	<string name="autoboot_activity">com.xpo.fullscreen.WEB</string>
+</resources>
