@@ -17,7 +17,7 @@ import android.webkit.PermissionRequest;
 import android.webkit.JavascriptInterface;
 import android.webkit.SslErrorHandler;
 import android.net.http.SslError;
-
+import android.webkit.JsResult;
 @SuppressLint({ "SetJavaScriptEnabled", "NewApi" })
 public class WEB extends BASE {
 
@@ -28,20 +28,6 @@ public class WEB extends BASE {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.fullscreen);
 		mWebView = (WebView) findViewById(R.id.webView1);
-
-		WebSettings webSettings = mWebView.getSettings();
-
-		// Enable Javascript for interaction
-		webSettings.setJavaScriptEnabled(true);
-
-		int currentapiVersion = android.os.Build.VERSION.SDK_INT;
-		if (currentapiVersion >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
-			webSettings.setAllowFileAccessFromFileURLs(true);
-			webSettings.setAllowUniversalAccessFromFileURLs(true);
-		}
-
-		webSettings.setAllowFileAccess(true);
-		webSettings.setAllowContentAccess(true);
 
 
 		// mWebView.loadUrl("http://hotairballoon-on-whitesmoke.com/html5/index.html");
@@ -88,6 +74,16 @@ public class WEB extends BASE {
             webSettings.setAllowFileAccessFromFileURLs(true);
             webSettings.setAllowUniversalAccessFromFileURLs(true);
 
+            int currentapiVersion = android.os.Build.VERSION.SDK_INT;
+            if (currentapiVersion >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
+                webSettings.setAllowFileAccessFromFileURLs(true);
+                webSettings.setAllowUniversalAccessFromFileURLs(true);
+            }
+
+            webSettings.setAllowFileAccess(true);
+            webSettings.setAllowContentAccess(true);
+
+
             // Add JS interface to allow calls from webview to Android
             // code. See below for WebAppInterface class implementation
             mWebView.addJavascriptInterface(new WebAppInterface(this), "Android");
@@ -120,6 +116,8 @@ public class WEB extends BASE {
                     });
                 }
             });
+            webSettings.setBuiltInZoomControls(false);
+            mWebView.requestFocusFromTouch();
             mWebView.loadUrl(uri);
         }
 		else
@@ -127,12 +125,18 @@ public class WEB extends BASE {
 	}
 
 	private void loadLocalHtmlPage(String htmlString) {
-        if (htmlString != null)
-            mWebView.loadDataWithBaseURL("file:///android_asset/320/",
-                    htmlString, "text/html", "UTF-8", null);
+        if (htmlString != null) {
+            WebSettings webSettings = mWebView.getSettings();
+            webSettings.setJavaScriptEnabled(true);
+            webSettings.setBuiltInZoomControls(false);
+            mWebView.requestFocusFromTouch();
+            mWebView.setWebViewClient(new WebViewClient());
+            mWebView.setWebChromeClient(new WebChromeClient());
+            mWebView.loadDataWithBaseURL("file:///android_asset/320/", htmlString, "text/html", "UTF-8", null);
 
-        else
-            Log.i("ERROROROOROROROR", "Cannot Find HTML");
+		}else {
+			Log.i("ERROROROOROROROR", "Cannot Find HTML");
+		}
     }
     // Interface b/w JS and Android code
     private class WebAppInterface {
