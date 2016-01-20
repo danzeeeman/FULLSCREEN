@@ -14,10 +14,9 @@ import android.webkit.WebViewClient;
 import android.content.Context;
 import android.widget.Toast;
 import android.webkit.PermissionRequest;
-import android.webkit.WebChromeClient;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
 import android.webkit.JavascriptInterface;
+import android.webkit.SslErrorHandler;
+import android.net.http.SslError;
 
 @SuppressLint({ "SetJavaScriptEnabled", "NewApi" })
 public class WEB extends BASE {
@@ -37,23 +36,17 @@ public class WEB extends BASE {
 
 		int currentapiVersion = android.os.Build.VERSION.SDK_INT;
 		if (currentapiVersion >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
-			mWebView.getSettings().setAllowFileAccessFromFileURLs(true); // Maybe
-																			// you
-																			// don't
-																			// need
-																			// this
-																			// rule
-			mWebView.getSettings().setAllowUniversalAccessFromFileURLs(true);
+			webSettings.setAllowFileAccessFromFileURLs(true);
+			webSettings.setAllowUniversalAccessFromFileURLs(true);
 		}
 
 		webSettings.setAllowFileAccess(true);
 		webSettings.setAllowContentAccess(true);
-		mWebView.setWebViewClient(new WebViewClient());
-		mWebView.setWebChromeClient(new WebChromeClient());
+
 
 		// mWebView.loadUrl("http://hotairballoon-on-whitesmoke.com/html5/index.html");
         String htmlString = getString(R.string.html_file);
-        if(htmlString.contains("http://")){
+        if(htmlString.contains("https://") || htmlString.contains("http://")){
             loadRemoteHtmlPage(htmlString);
         }else {
             loadLocalHtmlPage(getHtmlFromAsset());
@@ -100,20 +93,26 @@ public class WEB extends BASE {
             mWebView.addJavascriptInterface(new WebAppInterface(this), "Android");
 
             // Set a web view client and a chrome client
-            mWebView.setWebViewClient(new WebViewClient());
-            mWebView.setWebChromeClient(new WebChromeClient() {
-                // Need to accept permissions to use the camera and audio
-                @Override
-                public void onPermissionRequest(final PermissionRequest request) {
-                    Log.d("WEBBB", "onPermissionRequest");
-                    WEB.this.runOnUiThread(new Runnable() {
-//                        @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-                        @Override
-                        public void run() {
-                            // Make sure the request is coming from our file
-                            // Warning: This check may fail for local files
+            mWebView.setWebViewClient(new WebViewClient(){
+				@Override
+				public void onReceivedSslError (WebView view, SslErrorHandler handler, SslError error) {
+					handler.proceed();
+				}
+			});
+
+			mWebView.setWebChromeClient(new WebChromeClient() {
+				// Need to accept permissions to use the camera and audio
+				@Override
+				public void onPermissionRequest(final PermissionRequest request) {
+					Log.d("WEBBB", "onPermissionRequest");
+					WEB.this.runOnUiThread(new Runnable() {
+						//                        @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+						@Override
+						public void run() {
+							// Make sure the request is coming from our file
+							// Warning: This check may fail for local files
 //                            if (request.getOrigin().toString().equals(LOCAL_FILE)) {
-                                request.grant(request.getResources());
+							request.grant(request.getResources());
 //                            } else {
 //                                request.deny();
 //                            }
