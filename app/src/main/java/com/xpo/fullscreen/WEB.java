@@ -1,5 +1,4 @@
 package com.xpo.fullscreen;
-import com.xpo.fullscreen.R;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,6 +6,8 @@ import java.io.InputStreamReader;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -17,19 +18,31 @@ import android.webkit.PermissionRequest;
 import android.webkit.JavascriptInterface;
 import android.webkit.SslErrorHandler;
 import android.net.http.SslError;
-import android.webkit.JsResult;
+import android.view.GestureDetector;
 @SuppressLint({ "SetJavaScriptEnabled", "NewApi" })
 public class WEB extends BASE {
 
 	private WebView mWebView;
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.fullscreen);
 		mWebView = (WebView) findViewById(R.id.webView1);
-
-
+        mWebView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                Log.i("WEB", "onLongClick");
+                String htmlString = getString(R.string.html_file);
+                if(htmlString.contains("https://") || htmlString.contains("http://")){
+                    loadRemoteHtmlPage(htmlString);
+                }else {
+                    loadLocalHtmlPage(getHtmlFromAsset());
+                }
+                return true;
+            }
+        });
 		// mWebView.loadUrl("http://hotairballoon-on-whitesmoke.com/html5/index.html");
         String htmlString = getString(R.string.html_file);
         if(htmlString.contains("https://") || htmlString.contains("http://")){
@@ -37,6 +50,18 @@ public class WEB extends BASE {
         }else {
             loadLocalHtmlPage(getHtmlFromAsset());
         }
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		// mWebView.loadUrl("http://hotairballoon-on-whitesmoke.com/html5/index.html");
+		String htmlString = getString(R.string.html_file);
+		if(htmlString.contains("https://") || htmlString.contains("http://")){
+			loadRemoteHtmlPage(htmlString);
+		}else {
+			loadLocalHtmlPage(getHtmlFromAsset());
+		}
 	}
 
 	/**
@@ -61,8 +86,21 @@ public class WEB extends BASE {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 		return htmlString;
+	}
+
+	@Override
+	public boolean onKeyLongPress(int keyCode, KeyEvent event) {
+        Log.i("WEB", "onKeyLongPress");
+		String htmlString = getString(R.string.html_file);
+		if(htmlString.contains("https://") || htmlString.contains("http://")){
+			loadRemoteHtmlPage(htmlString);
+		}else {
+			loadLocalHtmlPage(getHtmlFromAsset());
+		}
+
+		return true;
+
 	}
 
 	private void loadRemoteHtmlPage(String uri) {

@@ -4,7 +4,7 @@
 	<!--Photobooth URL-->
 	<!--<string name="html_file">https://192.168.3.74:3031/photobooth.html</string>-->
 	<!-- Controller URL-->
-	<!--<string name="html_file">http://192.168.10.10:3030?0</string>-->
+	<string name="html_file">http://192.168.3.61:3030?0</string>
 	<!-- Color Screen-->
 	<!--<string name="html_file">http://192.168.3.61:3030/mobile.html</string>-->
 	<string name="gif_file">gifs/hats.gif</string>
