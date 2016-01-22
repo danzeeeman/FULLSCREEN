@@ -19,6 +19,7 @@ import android.webkit.JavascriptInterface;
 import android.webkit.SslErrorHandler;
 import android.net.http.SslError;
 import android.view.GestureDetector;
+import java.util.GregorianCalendar;
 @SuppressLint({ "SetJavaScriptEnabled", "NewApi" })
 public class WEB extends BASE {
 
@@ -31,15 +32,24 @@ public class WEB extends BASE {
 		setContentView(R.layout.fullscreen);
 		mWebView = (WebView) findViewById(R.id.webView1);
         mWebView.setOnLongClickListener(new View.OnLongClickListener() {
+            int count;
+            long lastPress = 0;
+            long firstPress = 0;
             @Override
-            public boolean onLongClick(View view) {
+            public boolean onLongClick(View view){
                 Log.i("WEB", "onLongClick");
-                String htmlString = getString(R.string.html_file);
-                if(htmlString.contains("https://") || htmlString.contains("http://")){
-                    loadRemoteHtmlPage(htmlString);
-                }else {
-                    loadLocalHtmlPage(getHtmlFromAsset());
+                if(lastPress == 0) {
+                    lastPress = System.currentTimeMillis();
                 }
+                if(lastPress - System.currentTimeMillis()<2000 && lastPress != 0) {
+                    String htmlString = getString(R.string.html_file);
+                    if (htmlString.contains("https://") || htmlString.contains("http://")) {
+                        loadRemoteHtmlPage(htmlString);
+                    } else {
+                        loadLocalHtmlPage(getHtmlFromAsset());
+                    }
+                }
+                lastPress = System.currentTimeMillis();
                 return true;
             }
         });
