@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/AndroidManifest.xml:2:1-51:12
+ADDED from /Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/AndroidManifest.xml:2:1-56:12
 	xmlns:android
 		ADDED from /Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/AndroidManifest.xml:2:11-69
 	package
@@ -17,6 +17,10 @@ ADDED from /Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/AndroidManife
 		INJECTED from /Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/AndroidManifest.xml
 uses-sdk
 ADDED from /Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:22.2.0] /Users/dantheman/src/android/FULLSCREEN-AS/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] /Users/dantheman/src/android/FULLSCREEN-AS/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.1.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] /Users/dantheman/src/android/FULLSCREEN-AS/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:22.2.0] /Users/dantheman/src/android/FULLSCREEN-AS/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
 		ADDED from /Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/AndroidManifest.xml:9:9-38
 		INJECTED from /Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/AndroidManifest.xml
@@ -74,7 +78,11 @@ ADDED from /Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/AndroidManife
 	android:name
 		ADDED from /Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/AndroidManifest.xml:22:19-62
 application
-ADDED from /Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/AndroidManifest.xml:23:5-49:19
+ADDED from /Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/AndroidManifest.xml:23:5-54:19
+MERGED from [com.android.support:support-v4:22.2.0] /Users/dantheman/src/android/FULLSCREEN-AS/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] /Users/dantheman/src/android/FULLSCREEN-AS/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.1.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] /Users/dantheman/src/android/FULLSCREEN-AS/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:22.2.0] /Users/dantheman/src/android/FULLSCREEN-AS/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from /Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/AndroidManifest.xml:27:9-41
 	android:allowBackup
@@ -129,3 +137,10 @@ ADDED from /Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/AndroidManife
 		ADDED from /Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/AndroidManifest.xml:48:73-97
 	android:name
 		ADDED from /Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/AndroidManifest.xml:48:18-72
+meta-data#com.google.android.gms.version
+ADDED from /Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/AndroidManifest.xml:51:9-53:69
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] /Users/dantheman/src/android/FULLSCREEN-AS/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:21:9-23:69
+	android:name
+		ADDED from /Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/AndroidManifest.xml:52:13-58
+	android:value
+		ADDED from /Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/AndroidManifest.xml:53:13-66
