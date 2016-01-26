@@ -50,7 +50,7 @@
     <string name="common_google_play_services_updating_title">Google Play services are updating</string>
     <string name="common_open_on_phone">Open on phone</string>
     <string name="gif_file">gifs/hats.gif</string>
-    <string name="html_file">https://192.168.3.74:3031/photobooth.html</string>
+    <string name="html_file">https://192.168.3.61:3031/photobooth.html</string>
     <string name="video_file">android.resource://com.xpo.fullscreen/raw/YOUR_VIDEO</string>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--

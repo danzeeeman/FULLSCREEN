@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">SocialGalaxy</string>
 	<!--Photobooth URL-->
-	<string name="html_file">https://192.168.3.74:3031/photobooth.html</string>
+	<string name="html_file">https://192.168.3.61:3031/photobooth.html</string>
 	<!-- Controller URL-->
 	<!--<string name="html_file">http://192.168.3.61:3030?0</string>-->
 	<!-- Color Screen-->

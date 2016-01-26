@@ -1,10 +1,18 @@
 [
     {
-        "merged": "/Users/dantheman/src/android/FULLSCREEN-AS/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_full_open_on_phone.png",
-        "source": "/Users/dantheman/src/android/FULLSCREEN-AS/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/res/drawable-mdpi/common_full_open_on_phone.png"
+        "merged": "/Users/samsungtunnel/src/FULLSCREEN/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_launcher.png",
+        "source": "/Users/samsungtunnel/src/FULLSCREEN/app/src/main/res/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/samsungtunnel/src/FULLSCREEN/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_full_open_on_phone.png",
+        "source": "/Users/samsungtunnel/src/FULLSCREEN/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/res/drawable-mdpi/common_full_open_on_phone.png"
     },
     {
         "merged": "/Users/dantheman/src/android/FULLSCREEN-AS/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_launcher.png",
         "source": "/Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/res/drawable-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/dantheman/src/android/FULLSCREEN-AS/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_full_open_on_phone.png",
+        "source": "/Users/dantheman/src/android/FULLSCREEN-AS/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/res/drawable-mdpi/common_full_open_on_phone.png"
     }
 ]

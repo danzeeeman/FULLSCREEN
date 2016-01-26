@@ -23,6 +23,7 @@ import android.net.http.SslError;
 import android.view.GestureDetector;
 import android.webkit.WebResourceError;
 import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -46,29 +47,7 @@ public class WEB extends BASE {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.fullscreen);
 		mWebView = (WebView) findViewById(R.id.webView1);
-		mWebView.setOnLongClickListener(new View.OnLongClickListener() {
-			int count;
-			long lastPress = 0;
-			long firstPress = 0;
-
-			@Override
-			public boolean onLongClick(View view) {
-				Log.i("WEB", "onLongClick");
-				if (lastPress == 0) {
-					lastPress = System.currentTimeMillis();
-				}
-				if (lastPress - System.currentTimeMillis() < 2000 && lastPress != 0) {
-					String htmlString = getString(R.string.html_file);
-					if (htmlString.contains("https://") || htmlString.contains("http://")) {
-						loadRemoteHtmlPage(htmlString);
-					} else {
-						loadLocalHtmlPage(getHtmlFromAsset());
-					}
-				}
-				lastPress = System.currentTimeMillis();
-				return true;
-			}
-		});
+		
 		// mWebView.loadUrl("http://hotairballoon-on-whitesmoke.com/html5/index.html");
 		String htmlString = getString(R.string.html_file);
 		if (htmlString.contains("https://") || htmlString.contains("http://")) {
@@ -118,19 +97,6 @@ public class WEB extends BASE {
 		return htmlString;
 	}
 
-	@Override
-	public boolean onKeyLongPress(int keyCode, KeyEvent event) {
-		Log.i("WEB", "onKeyLongPress");
-		String htmlString = getString(R.string.html_file);
-		if (htmlString.contains("https://") || htmlString.contains("http://")) {
-			loadRemoteHtmlPage(htmlString);
-		} else {
-			loadLocalHtmlPage(getHtmlFromAsset());
-		}
-
-		return true;
-
-	}
 
 	private void loadRemoteHtmlPage(String uri) {
         final String url = uri;
@@ -163,10 +129,21 @@ public class WEB extends BASE {
 					handler.proceed();
 				}
 
+                @Override
+                public void onReceivedError(WebView view, int errorCode, String description, String failingUrl){
+                    Log.i("DEBUG DEBUG DEBUG", String.valueOf(errorCode));
+                    view.loadUrl(url);
+                }
+
 				@Override
 				public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
-                    super.onReceivedError(view, request, error);
-                    Log.e(String.valueOf(error.getErrorCode()), error.getDescription().toString());
+//                    super.onReceivedError(view, request, error);
+                    Log.i("DEBUG DEBUG DEBUG", String.valueOf(error.getErrorCode())+" "+error.getDescription().toString());
+                    view.loadUrl(url);
+                }
+				@Override
+				public void onReceivedHttpError (WebView view, WebResourceRequest request, WebResourceResponse errorResponse){
+                    Log.d("DEBUG DEBUG DEBUG", "HTTP Error: "+String.valueOf(errorResponse.getStatusCode()));
                     view.loadUrl(url);
                 }
 			});
