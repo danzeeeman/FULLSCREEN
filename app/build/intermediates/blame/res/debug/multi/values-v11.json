@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/dantheman/src/android/FULLSCREEN-AS/app/build/intermediates/res/merged/debug/values-v11/values-v11.xml",
+        "outputFile": "/Users/dantheman/src/android/final-apps/tablet/app/build/intermediates/res/merged/debug/values-v11/values-v11.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 187
                 },
                 "from": {
-                    "file": "/Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/res/values-v11/styles.xml",
+                    "file": "/Users/dantheman/src/android/final-apps/tablet/app/src/main/res/values-v11/styles.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -33,7 +33,7 @@
                     "endOffset": 351
                 },
                 "from": {
-                    "file": "/Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/res/values-v11/styles.xml",
+                    "file": "/Users/dantheman/src/android/final-apps/tablet/app/src/main/res/values-v11/styles.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -54,7 +54,7 @@
                     "endOffset": 789
                 },
                 "from": {
-                    "file": "/Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/res/values-v11/styles.xml",
+                    "file": "/Users/dantheman/src/android/final-apps/tablet/app/src/main/res/values-v11/styles.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,

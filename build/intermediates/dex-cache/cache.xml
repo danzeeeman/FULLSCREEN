@@ -1,2 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/dantheman/src/android/final-apps/tablet/app/src/main/libs/mina-core-2.0.0-RC1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6b5e8388d56c7917609cdd6908eddde80ccde79c">
+        <dex dex="/Users/dantheman/src/android/final-apps/tablet/app/build/intermediates/pre-dexed/debug/mina-core-2.0.0-RC1_1f9e12c2f63c072edcd11aa4389426bbe6d3790b.jar" />
+    </item>
+    <item
+        jar="/Users/dantheman/src/android/final-apps/tablet/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="/Users/dantheman/src/android/final-apps/tablet/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-8.1.0_2e845708711ebaa51dfecbab6770fb6b723f2d28.jar" />
+    </item>
+    <item
+        jar="/Users/dantheman/src/android/final-apps/tablet/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/Users/dantheman/src/android/final-apps/tablet/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-22.2.0_5d9b200cbe8e10c46de817a2e90bf9471da9efb7.jar" />
+    </item>
+    <item
+        jar="/Users/dantheman/src/android/final-apps/tablet/app/src/main/libs/slf4j-android-1.5.8.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="78bb288ee8f11b0a08400230359151677e33a371">
+        <dex dex="/Users/dantheman/src/android/final-apps/tablet/app/build/intermediates/pre-dexed/debug/slf4j-android-1.5.8_e4c5d10037eb3c05f2e6f3f48f5e715fabeadc86.jar" />
+    </item>
+    <item
+        jar="/Users/dantheman/src/android/final-apps/tablet/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/Users/dantheman/src/android/final-apps/tablet/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0_add470e101b1293ab3e5b327fcdb9214395a34d0.jar" />
+    </item>
+    <item
+        jar="/Users/dantheman/src/android/final-apps/tablet/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="/Users/dantheman/src/android/final-apps/tablet/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-appindexing-8.1.0_b514f42226724b4ce14cfe298eb7d5ca118f6df9.jar" />
+    </item>
+    <item
+        jar="/Users/dantheman/src/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/Users/dantheman/src/android/final-apps/tablet/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0_eba2b822fd66040e4ea78a2143e18d129a5287c4.jar" />
+    </item>
+
+</items>

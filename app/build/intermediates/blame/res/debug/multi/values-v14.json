@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/dantheman/src/android/FULLSCREEN-AS/app/build/intermediates/res/merged/debug/values-v14/values-v14.xml",
+        "outputFile": "/Users/dantheman/src/android/final-apps/tablet/app/build/intermediates/res/merged/debug/values-v14/values-v14.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 201
                 },
                 "from": {
-                    "file": "/Users/dantheman/src/android/FULLSCREEN-AS/app/src/main/res/values-v14/styles.xml",
+                    "file": "/Users/dantheman/src/android/final-apps/tablet/app/src/main/res/values-v14/styles.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,

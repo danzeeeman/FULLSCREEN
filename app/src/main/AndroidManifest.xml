@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.xpo.fullscreen"
-    android:versionCode="2"
+    package="com.socialgalaxy.tunnel"
+    android:versionCode="7"
     android:versionName="1.0" >
 
     <uses-sdk
@@ -21,13 +21,13 @@
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
 	<uses-permission android:name="android.permission.GET_TASKS" />
     <application
-        android:name="com.xpo.fullscreen.AppContext"
+        android:name="com.socialgalaxy.tunnel.AppContext"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.xpo.fullscreen.WEB"
+            android:name="com.socialgalaxy.tunnel.WEB"
             android:configChanges="keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
@@ -40,12 +40,12 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name="com.xpo.fullscreen.Receiver.BootReceiver" >
+        <receiver android:name="com.socialgalaxy.tunnel.Receiver.BootReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <service android:name="com.xpo.fullscreen.Service.KioskService" android:exported="false"/>
+        <service android:name="com.socialgalaxy.tunnel.Service.KioskService" android:exported="false"/>
         <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
              App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
         <meta-data
