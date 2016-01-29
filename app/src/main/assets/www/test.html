@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+   function showAndroidToast(toast) {
+        Android.showToast(toast);
+    }
+    function showSettings() {
+        Android.showSettings();
+    }
+    </script>
+</head>
+<body>
+
+<input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" />
+<input type="button" onClick="showSettings()" value="Show showSettings" />
+</body>
+</html>
