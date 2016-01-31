@@ -174,6 +174,7 @@ public class WEB extends BASE {
 				// Need to accept permissions to use the camera and audio
 				@Override
 				public boolean onConsoleMessage(ConsoleMessage consoleMessage) {
+					Log.i("WebChromeClient", "ConsoleMessage "+consoleMessage.message());
 					if (consoleMessage.messageLevel() == ConsoleMessage.MessageLevel.ERROR) {
 						mWebView.loadUrl(url);
 						Log.e("WebChromeClient", "ConsoleMessage ERROR");
