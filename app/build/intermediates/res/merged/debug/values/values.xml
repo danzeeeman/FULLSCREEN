@@ -14,7 +14,7 @@
     <declare-styleable name="ButtonBarContainerTheme"><attr format="reference" name="buttonBarStyle"/><attr format="reference" name="buttonBarButtonStyle"/></declare-styleable>
     <declare-styleable name="LoadingImageView"><attr format="enum" name="imageAspectRatioAdjust"><enum name="none" value="0"/><enum name="adjust_width" value="1"/><enum name="adjust_height" value="2"/></attr><attr format="float" name="imageAspectRatio"/><attr format="boolean" name="circleCrop"/></declare-styleable>
     <integer name="google_play_services_version">8115000</integer>
-    <string name="app_name">Photobooth</string>
+    <string name="app_name">Tunnel</string>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
     <string name="autoboot_activity">com.socialgalaxy.tunnel.WEB</string>
@@ -50,7 +50,7 @@
     <string name="common_google_play_services_updating_title">Google Play services are updating</string>
     <string name="common_open_on_phone">Open on phone</string>
     <string name="gif_file">gifs/hats.gif</string>
-    <string name="html_file">https://192.168.168.10:3031/photobooth.html</string>
+    <string name="html_file">https://192.168.168.10:3031/mobile.html</string>
     <string name="video_file">android.resource://com.xpo.fullscreen/raw/YOUR_VIDEO</string>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--

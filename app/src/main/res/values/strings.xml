@@ -7,8 +7,8 @@
 	<!--<string name="html_file">http://192.168.168.10:3030/login.html</string>-->
 	<!-- Color Screen-->
 	<!--<string name="html_file">http://128.237.180.128:3030/mobile.html</string>-->
-	<string name="html_file">http://192.168.168.10:3030/mobile.html</string>
-	<!--<string name="html_file">www/test.html</string>-->
+	<string name="html_file">https://192.168.168.10:3031/mobile.html</string>
+	<!--<string name="html_file">https://webaudiodemos.appspot.com/volume-meter/</string>-->
 	<string name="gif_file">gifs/hats.gif</string>
 	<string name="video_file">android.resource://com.xpo.fullscreen/raw/YOUR_VIDEO</string>
 	<string name="autoboot_package">com.socialgalaxy.tunnel</string>

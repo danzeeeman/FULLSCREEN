@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -23,10 +24,12 @@ import android.webkit.JavascriptInterface;
 import android.webkit.SslErrorHandler;
 import android.net.http.SslError;
 import android.webkit.ConsoleMessage;
-
+import android.content.pm.PackageManager;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
+import android.content.ComponentName;
+import android.view.ViewGroup.LayoutParams;
 
 import java.util.GregorianCalendar;
 
@@ -42,10 +45,58 @@ public class WEB extends BASE {
 
 
 	@Override
+	public void clearHome(){
+		super.clearHome();
+	}
+
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.fullscreen);
 		mWebView = (WebView) findViewById(R.id.webView1);
+
+		mWebView.setOnTouchListener(new View.OnTouchListener() {
+			int count = 0;
+			public boolean onTouch(View view, MotionEvent event) {
+					final int X = (int) event.getRawX();
+					final int Y = (int) event.getRawY();
+					switch (event.getAction() & MotionEvent.ACTION_MASK) {
+						case MotionEvent.ACTION_DOWN:
+							if(X > 0 && X < 200 && Y > 0 && Y < 200 && count == 0) {
+								Log.i("DEBUG TOUCH", "topLeft");
+								count++;
+							}else if(X > view.getWidth()-200 && X < view.getWidth() && Y > 0 && Y < 200 && count == 1) {
+								Log.i("DEBUG TOUCH", "topRight");
+								count++;
+							}else if(X > 0 && X < 200 && Y > view.getHeight()-200 && Y < view.getHeight() && count == 3){
+								Log.i("DEBUG TOUCH", "bottomLeft");
+								count++;
+							}else if(X > view.getWidth()-200 && X < view.getWidth() && Y > view.getHeight()-200 && Y < view.getHeight() && count == 2) {
+								Log.i("DEBUG TOUCH", "bottomRight");
+								count++;
+							}
+							if(count == 4){
+								clearHome();
+								count = 0;
+							}
+							if(X > 200 && X < view.getWidth()-200 && Y > 200 && Y < view.getHeight()-200){
+								count = 0;
+							}
+							break;
+						case MotionEvent.ACTION_UP:
+							break;
+						case MotionEvent.ACTION_POINTER_DOWN:
+							break;
+						case MotionEvent.ACTION_POINTER_UP:
+							break;
+						case MotionEvent.ACTION_MOVE:
+							break;
+					}
+
+				return false;
+			}
+		});
+
 		mWebView.setOnLongClickListener(new View.OnLongClickListener() {
 			int count;
 			long lastPress = 0;
@@ -121,12 +172,14 @@ public class WEB extends BASE {
 	@Override
 	public boolean onKeyLongPress(int keyCode, KeyEvent event) {
 		Log.i("WEB", "onKeyLongPress");
-		String htmlString = getString(R.string.html_file);
-		if (htmlString.contains("https://") || htmlString.contains("http://")) {
-			loadRemoteHtmlPage(htmlString);
-		} else {
-			loadLocalHtmlPage(getHtmlFromAsset());
-		}
+//		String htmlString = getString(R.string.html_file);
+//		if (htmlString.contains("https://") || htmlString.contains("http://")) {
+//			loadRemoteHtmlPage(htmlString);
+//		} else {
+//			loadLocalHtmlPage(getHtmlFromAsset());
+//		}
+
+
 
 		return true;
 
@@ -276,6 +329,14 @@ public class WEB extends BASE {
 			Intent settingsIntent = new Intent(Settings.ACTION_SETTINGS);
 			mContext.startActivity(settingsIntent);
 			android.os.Process.killProcess(android.os.Process.myPid());
+		}
+		@JavascriptInterface
+		public void restartAndroidApp(){
+			Log.i("restartAndroidApp", "restartAndroidApp");
+			Intent i = new Intent();
+			i.setClassName(getString(R.string.autoboot_package), getString(R.string.autoboot_activity));
+			i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			mContext.startActivity(i);
 		}
 	}
 }
