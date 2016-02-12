@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0099cc"
-    tools:context=".WEB" >
+    tools:context=".WEB"
+    android:id="@+id/baseframe">
 
     <WebView
         android:id="@+id/webView1"

@@ -169,4 +169,20 @@ public class BASE extends Activity {
 			}
 		}
 	};
+
+    public void startRestartAppCountDown(){
+        restartApp.postDelayed(restartAppRunnable, 10000);
+    }
+
+    private Handler restartApp = new Handler();
+    private Runnable restartAppRunnable = new Runnable() {
+        @Override
+        public void run() {
+            Log.i("restartAndroidApp", "restartAndroidApp");
+            Intent i = new Intent();
+            i.setClassName(getString(R.string.autoboot_package), getString(R.string.autoboot_activity));
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(i);
+        }
+    };
 }
